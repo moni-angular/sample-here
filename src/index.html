@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MapForIe</title>
+  <base href="/">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">          
+<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js.map"/> -->
+<script>
+  var ua = window.navigator.userAgent;
+  var trident = ua.indexOf('Trident'); 
+  if(trident != -1){     
+    let myCoolCode = document.createElement("script");
+    myCoolCode.setAttribute("src", "https://js.api.here.com/v3/3.1/mapsjs-core-legacy.js");
+    myCoolCode.setAttribute("type","text/javascript");
+    myCoolCode.setAttribute("charset","utf-8");
+    document.head.appendChild(myCoolCode);      
+  }          
+</script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  var ua = window.navigator.userAgent;
+  var trident = ua.indexOf('Trident'); 
+  if(trident != 1){      
+    let myCoolCode1 = document.createElement("script");
+    myCoolCode1.setAttribute("src","https://js.api.here.com/v3/3.1/mapsjs-service-legacy.js");
+    myCoolCode1.setAttribute("type","text/javascript");
+    myCoolCode1.setAttribute("charset","utf-8");
+    document.head.appendChild(myCoolCode1); 
+  }          
+</script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+<link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
